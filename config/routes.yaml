@@ -1,0 +1,17 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+add_star:
+    path: /stars
+    methods: POST
+    controller: App\Controller\StarController::addStar
+    requirements:
+        _format: json
+
+get_unique_stars:
+    path: /stars
+    methods: GET
+    controller: App\Controller\StarController::getUniqueStars
+    requirements:
+        _format: json
